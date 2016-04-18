@@ -1,7 +1,6 @@
 /* 
- * rosserial Subscriber Example
- * Blinks an LED on callback
- */
+we take the coordinates of the centroid wrt to reference point given by the object_track.py program and then move the bot 
+accordingly.We have implemented PID to smoothen the turning  motion of the bot */
 
 #include <ros.h>
 #include <sensor_msgs/Joy.h> 
@@ -38,7 +37,7 @@ int wy;
 void callback(const geometry_msgs::Point& pt){
   
 
-wy= sigmoid(pt.y)*255;
+//wy= sigmoid(pt.y)*255;
 //going forward 
 if(pt.y>90){
      analogWrite(5,90);analogWrite(6,0);
